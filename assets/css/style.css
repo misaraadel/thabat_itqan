@@ -2298,7 +2298,7 @@ footer .copyrights a span {
     order: 1;
   }
   header {
-    padding: 200px 0px 40px !important;
+    padding: 101px 0px 8px !important;
   }
   header .swiper-slide {
     padding-bottom: 50px;
@@ -2307,10 +2307,16 @@ footer .copyrights a span {
     background-position: center;
   }
   header h1 {
-    font-size: 30px !important;
+    font-size: 24px !important;
   }
   header h1 span {
-    font-size: 30px !important;
+    font-size: 24px !important;
+  }
+  header .desc {
+    margin: 20px 0px;
+  }
+  header .scroll-arrow {
+    bottom: 30px;
   }
   html[dir=rtl] header .scroll-arrow {
     right: unset;
