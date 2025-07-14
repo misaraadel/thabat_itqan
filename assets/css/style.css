@@ -2239,6 +2239,15 @@ footer .copyrights a span {
   }
 }
 @media (max-width: 999px) {
+  .navbar {
+    padding-bottom: 10px;
+  }
+  .navbar.scrolled {
+    padding: 10px 0px;
+  }
+  .navbar.scrolled .nav-contain {
+    top: 80px !important;
+  }
   .navbar .hamburger {
     display: block !important;
   }
@@ -2250,9 +2259,9 @@ footer .copyrights a span {
     height: 100vh;
     position: absolute;
     padding: 20px 15px;
-    background: linear-gradient(90deg, #212121, #423D43);
+    background: #fff;
     z-index: 99;
-    top: 105px;
+    top: 80px;
     right: -100%;
     flex-direction: column !important;
     justify-content: flex-start !important;
@@ -2290,8 +2299,10 @@ footer .copyrights a span {
     right: 0px;
   }
   .navbar .brand-name img {
-    -o-object-position: center !important;
-       object-position: center !important;
+    width: 150px !important;
+    height: 60px !important;
+    -o-object-position: left !important;
+       object-position: left !important;
   }
   .navbar.scrolled .nav-contain {
     top: 94px;
@@ -2463,6 +2474,12 @@ footer .copyrights a span {
   }
   .single-event .gallery-img {
     height: 180px;
+  }
+  .more-information .contain .data h1 {
+    font-size: 20px;
+  }
+  .sub-header {
+    padding: 140px 0px 40px;
   }
   .sub-header h1 {
     font-size: 20px !important;
