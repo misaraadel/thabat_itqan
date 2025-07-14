@@ -168,4 +168,6 @@ $(document).ready(function () {
       $('body, html').animate({scrollTop: scrollTo+'px'}, 900);
     }
   });
+
+  $('.loader').fadeOut(2000);
 });
