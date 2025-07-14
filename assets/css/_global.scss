@@ -4,7 +4,7 @@
     scroll-behavior: smooth !important;
 
     &::selection{
-        background-color: #199EBD;
+        background-color: #111844;
         color: #fff; 
     }
     
@@ -17,12 +17,12 @@
     }
     
     &::-webkit-scrollbar-thumb {
-        background: #199EBD; 
+        background: #111844; 
         border-radius: 8px;
     }
 
     &::-webkit-scrollbar-thumb:hover {
-        background: #199EBD; 
+        background: #111844; 
     }
 }
 
@@ -59,7 +59,7 @@ ul{
     .swiper-pagination-bullet {
       width: 33px;
       height: 3px;
-      background-color: rgba($color: #199EBD, $alpha: 0.20);
+      background-color: rgba($color: #111844, $alpha: 0.20);
       border-radius: 2px;
 
       &.swiper-pagination-bullet-active {
