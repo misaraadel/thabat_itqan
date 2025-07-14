@@ -153,19 +153,19 @@ html[dir="rtl"] {
 }
 
 @mixin linaerText {
-  background: -webkit-linear-gradient(180deg, #199EBD, #212121);
+  background: -webkit-linear-gradient(180deg, #111844, #921a1c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 :root {
-  --primary-color: #199EBD;
-  --secondary-color: #212121;
+  --primary-color: #111844;
+  --secondary-color: #921a1c;
   --dark-color: #000;
   --light-color: #fff;
   --gray-color: #9B9B9B;
 
-  --pimrary-filer: invert(50%) sepia(84%) saturate(465%) hue-rotate(144deg) brightness(88%) contrast(89%);
+  --pimrary-filer: invert(6%) sepia(26%) saturate(7488%) hue-rotate(227deg) brightness(108%) contrast(97%);
   --light-filter: invert(100%) sepia(6%) saturate(2%) hue-rotate(104deg) brightness(106%) contrast(100%);
 }
 
@@ -344,7 +344,7 @@ html[dir="rtl"] {
     .image-content {
       width: 47px;
       height: 47px;
-      background-color: rgba($color: #199EBD, $alpha: 0.40);
+      background-color: rgba($color: #111844, $alpha: 0.40);
       border-radius: 50%;
       display: flex;
       align-content: center;
@@ -387,15 +387,14 @@ html[dir="rtl"] {
   position: fixed;
   top: 0px;
   left: 0;
-  padding: 20px 0px 0px;
-  background-color: transparent;
+  padding: 10px 0px 0px;
+  background-color: var(--light-color);
   z-index: 999;
   transition: all .3s linear;
 
   &.scrolled {
-    background: linear-gradient(90deg, #212121, #423D43);
-    box-shadow: 0px 0px 10px rgba($color: #199EBD, $alpha: 0.2);
-    padding: 10px 0px;
+    box-shadow: 0px 0px 10px rgba($color: #111844, $alpha: 0.2);
+    padding: 0px 0px;
   }
 
   .contain {
@@ -411,7 +410,7 @@ html[dir="rtl"] {
       .line{
         width: 30px;
         height: 3px;
-        background: linear-gradient(90deg, #199EBD, #fff); 
+        background: var(--secondary-color); 
         display: block;
         margin: 8px auto;
         transition: all 0.3s ease-in-out;
@@ -444,11 +443,8 @@ html[dir="rtl"] {
     }
 
     .brand-name img {
-      width: 147px;
-      height: 80px;
-      background-color: var(--light-color);
-      padding: 5px;
-      border-radius: 6px;
+      width: 200px;
+      height: 100px;
       object-fit: contain;
     }
 
@@ -471,7 +467,7 @@ html[dir="rtl"] {
           
           a {
             position: relative;
-            color: var(--light-color);
+            color: var(--dark-color);
             text-transform: capitalize;
             font-size: 16px;
             font-weight: 700;
@@ -483,7 +479,7 @@ html[dir="rtl"] {
               height: 3px;
               bottom: 0px;
               z-index: -1;
-              background-color: var(--primary-color);
+              background-color: var(--secondary-color);
               transition: all .3s linear;
             }
   
@@ -496,6 +492,7 @@ html[dir="rtl"] {
             }
   
             &:hover, &.active {
+              color: var(--secondary-color);
               &::after, &::before {
                 width: 55%;
               }
@@ -523,7 +520,7 @@ html[dir="rtl"] {
             align-items: center;
             align-content: center;
             justify-content: center;
-            background-color: rgba($color: #fff, $alpha: 0.20);
+            background-color: rgba($color: #921a1c, $alpha: 1.0);
             border-radius: 6px;
             position: relative;
             overflow: hidden;
@@ -534,7 +531,7 @@ html[dir="rtl"] {
               position: absolute;
               width: 100%;
               height: 0px;
-              background-color: var(--primary-color);
+              background-color: var(--secondary-color);
               top: 0;
               left: 0;
               z-index: -1;
@@ -572,7 +569,7 @@ html[dir="rtl"] {
 header {
   width: 100%;
   padding: 265px 0px 50px;
-  background: linear-gradient(90deg, #212121, #423D43);
+  background: linear-gradient(90deg, #921a1c, #111844);
   position: relative;
   z-index: 9;
   overflow: hidden;
@@ -589,7 +586,7 @@ header {
     top: 0;
     left: 0;
     z-index: 0;
-    background: linear-gradient(90deg, #212121, #423D43);
+    background: linear-gradient(90deg, #921a1c, #423D43);
     opacity: .8;
   }
 
@@ -764,7 +761,7 @@ header {
 .sub-header {
   width: 100%;
   padding: 200px 0px 68px;
-  background: linear-gradient(90deg, #212121, #423D43);
+  background: linear-gradient(90deg, #921a1c, #423D43);
   position: relative;
   z-index: 9;
   overflow: hidden;
@@ -777,7 +774,7 @@ header {
     top: 0;
     left: 0;
     z-index: -1;
-    background: linear-gradient(90deg, #212121, #423D43);
+    background: linear-gradient(90deg, #921a1c, #423D43);
     opacity: .8;
   }
 
@@ -1058,7 +1055,7 @@ header {
 }
 
 .courses {
-  background-color: rgba($color: #199EBD, $alpha: 0.03);
+  background-color: rgba($color: #111844, $alpha: 0.03);
 
   .heading {
     margin-bottom: 65px !important;
@@ -1469,7 +1466,7 @@ header {
       position: absolute;
       width: 100%;
       height: 80%;
-      background: linear-gradient(90deg, #199EBD, #423D43);
+      background: linear-gradient(90deg, #111844, #423D43);
       border-radius: 6px;
       bottom: 0;
       left: 0;
@@ -1620,7 +1617,7 @@ header {
 }
 
 .clients {
-  background-color: rgba($color: #199EBD, $alpha: 0.03);
+  background-color: rgba($color: #111844, $alpha: 0.03);
 
   .heading {
     margin-bottom: 65px;
@@ -1788,10 +1785,10 @@ header {
     .form-control {
       width: 100%;
       height: 100%;
-      background-color: rgba($color: #199EBD, $alpha: 0.06);
+      background-color: rgba($color: #111844, $alpha: 0.06);
       border-radius: 6px;
       padding-inline-start: 50px;
-      border: 1px solid rgba($color: #199EBD, $alpha: 0.0);
+      border: 1px solid rgba($color: #111844, $alpha: 0.0);
       color: var(--dark-color);
       font-size: 16px;
       font-weight: 500;
@@ -1809,7 +1806,7 @@ header {
       }
 
       .from-control {
-        border-color: rgba($color: #199EBD, $alpha: 0.08);
+        border-color: rgba($color: #111844, $alpha: 0.08);
       }
     }
   }
@@ -1829,7 +1826,7 @@ header {
   .contain {
     width: 100%;
     padding: 70px 0px;
-    background: linear-gradient(-90deg, #199EBD, #423D43);
+    background: linear-gradient(-90deg, #111844, #423D43);
     border-radius: 6px;
 
     .data {
@@ -1893,7 +1890,7 @@ header {
     width: 100%;
     margin: 40px 0px;
     padding: 40px 0px;
-    background-color: rgba($color: #199EBD, $alpha: 0.03);
+    background-color: rgba($color: #111844, $alpha: 0.03);
     border-radius: 6px;
     text-align: center;
 
@@ -2095,7 +2092,7 @@ footer {
     top: 0;
     left: 0;
     z-index: 0;
-    background: linear-gradient(90deg, #212121, #423D43);
+    background: linear-gradient(90deg, #921a1c, #423D43);
     opacity: .8;
   }
 
@@ -2268,7 +2265,7 @@ footer {
 
   .modal-content {
     border-color: transparent !important;
-    box-shadow: 0px 0px 10px rgba($color: #199EBD, $alpha: 0.05);
+    box-shadow: 0px 0px 10px rgba($color: #111844, $alpha: 0.05);
     border-radius: 10px !important;
     z-index: 9;
   
