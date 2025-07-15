@@ -1,5 +1,5 @@
 @media (max-width: 1999px) and (min-width: 1000px) {
-  .navbar .contain .nav-contain {
+  .navbar .contain {
     .navbar-nav li {
       margin-inline-end: 15px;
   
@@ -26,7 +26,7 @@
     &.scrolled { 
       padding: 10px 0px;
 
-      .nav-contain {
+      .navbar-nav {
         top: 80px !important;
       }
     }
@@ -38,7 +38,7 @@
       display: none;
     }
 
-    .nav-contain {
+    .navbar-nav {
       width: 100% !important;
       height: 100vh;
       position: absolute;
@@ -53,34 +53,25 @@
       align-content: flex-start !important;
       transition: all .3s linear;
 
-      .navbar-nav {
+      li {
         width: 100%;
-        flex-direction: column !important;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        margin-bottom: 15px;
+        margin: 0px !important;
+        padding: 10px 0px;
+        border-bottom: 1px solid rgba($color: #111844, $alpha: 0.2);
 
-        li {
+        &:last-child {
+          border-bottom: 0px !important;
+        }
+
+        a {
           width: 100%;
-          margin: 0px !important;
-          padding: 10px 0px;
-          border-bottom: 1px solid rgba($color: #111844, $alpha: 0.2);
-  
-          &:last-child {
-            border-bottom: 0px !important;
+
+          &::after, &::before {
+            display: none;
           }
-  
-          a {
-            width: 100%;
 
-            &::after, &::before {
-              display: none;
-            }
-
-            &:hover {
-              color: var(--primary-color);
-            }
+          &:hover {
+            color: var(--primary-color);
           }
         }
       }
@@ -97,7 +88,7 @@
     }
 
     &.scrolled {
-      .nav-contain {
+      .navbar-nav {
         top: 94px;
       }
 
@@ -115,7 +106,7 @@
   }
 
   html[dir="rtl"] {
-    .nav-contain {
+    .navbar-nav {
       left: -100%;
       right: unset;
 

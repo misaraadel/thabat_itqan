@@ -453,14 +453,13 @@ html[dir=rtl] .whatsapp-btn, html[dir=rtl] .call-btn {
   position: fixed;
   top: 0px;
   left: 0;
-  padding: 10px 0px 0px;
+  padding: 10px 0px 10px;
   background-color: var(--light-color);
   z-index: 999;
   transition: all 0.3s linear;
 }
 .navbar.scrolled {
   box-shadow: 0px 0px 10px rgba(17, 24, 68, 0.2);
-  padding: 0px 0px;
 }
 .navbar .contain {
   width: 100%;
@@ -510,23 +509,41 @@ html[dir=rtl] .whatsapp-btn, html[dir=rtl] .call-btn {
   align-content: center;
   justify-content: space-between;
 }
-.navbar .contain .nav-contain .navbar-nav {
+.navbar .contain .navbar-nav {
   flex-direction: row;
 }
-.navbar .contain .nav-contain .navbar-nav li {
+.navbar .contain .navbar-nav li {
   margin-inline-end: 25px;
 }
-.navbar .contain .nav-contain .navbar-nav li:last-child {
+.navbar .contain .navbar-nav li:last-child {
   margin-inline-end: 0px;
 }
-.navbar .contain .nav-contain .navbar-nav li a {
+.navbar .contain .navbar-nav li.hidden-mobile {
+  display: none;
+}
+@media (max-width: 992px) {
+  .navbar .contain .navbar-nav li.hidden-mobile {
+    display: block;
+  }
+  .navbar .contain .navbar-nav li.hidden-mobile .socail-media {
+    display: flex !important;
+    gap: 15px;
+  }
+  .navbar .contain .navbar-nav li.hidden-mobile .socail-media li {
+    border: 0px !important;
+    padding: 0px !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+}
+.navbar .contain .navbar-nav li a {
   position: relative;
   color: var(--dark-color);
   text-transform: capitalize;
   font-size: 16px;
   font-weight: 700;
 }
-.navbar .contain .nav-contain .navbar-nav li a::after, .navbar .contain .nav-contain .navbar-nav li a::before {
+.navbar .contain .navbar-nav li a::after, .navbar .contain .navbar-nav li a::before {
   content: "";
   position: absolute;
   width: 0px;
@@ -536,30 +553,35 @@ html[dir=rtl] .whatsapp-btn, html[dir=rtl] .call-btn {
   background-color: var(--secondary-color);
   transition: all 0.3s linear;
 }
-.navbar .contain .nav-contain .navbar-nav li a::after {
+.navbar .contain .navbar-nav li a::after {
   left: 0;
 }
-.navbar .contain .nav-contain .navbar-nav li a::before {
+.navbar .contain .navbar-nav li a::before {
   right: 0;
 }
-.navbar .contain .nav-contain .navbar-nav li a:hover, .navbar .contain .nav-contain .navbar-nav li a.active {
+.navbar .contain .navbar-nav li a:hover, .navbar .contain .navbar-nav li a.active {
   color: var(--secondary-color);
 }
-.navbar .contain .nav-contain .navbar-nav li a:hover::after, .navbar .contain .nav-contain .navbar-nav li a:hover::before, .navbar .contain .nav-contain .navbar-nav li a.active::after, .navbar .contain .nav-contain .navbar-nav li a.active::before {
+.navbar .contain .navbar-nav li a:hover::after, .navbar .contain .navbar-nav li a:hover::before, .navbar .contain .navbar-nav li a.active::after, .navbar .contain .navbar-nav li a.active::before {
   width: 55%;
 }
-.navbar .contain .nav-contain .socail-media {
+.navbar .contain .socail-media {
   display: flex;
   align-items: center;
   align-content: center;
 }
-.navbar .contain .nav-contain .socail-media li {
+@media (max-width: 992px) {
+  .navbar .contain .socail-media {
+    display: none;
+  }
+}
+.navbar .contain .socail-media li {
   margin-inline-end: 10px;
 }
-.navbar .contain .nav-contain .socail-media li:last-child {
+.navbar .contain .socail-media li:last-child {
   margin-inline-end: 0px;
 }
-.navbar .contain .nav-contain .socail-media li a {
+.navbar .contain .socail-media li a {
   width: 47px;
   height: 47px;
   display: flex;
@@ -572,7 +594,7 @@ html[dir=rtl] .whatsapp-btn, html[dir=rtl] .call-btn {
   overflow: hidden;
   z-index: 9;
 }
-.navbar .contain .nav-contain .socail-media li a::after {
+.navbar .contain .socail-media li a::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -583,21 +605,21 @@ html[dir=rtl] .whatsapp-btn, html[dir=rtl] .call-btn {
   z-index: -1;
   transition: all 0.3s linear;
 }
-.navbar .contain .nav-contain .socail-media li a img {
+.navbar .contain .socail-media li a img {
   width: 24px;
   height: 24px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.navbar .contain .nav-contain .socail-media li a span {
+.navbar .contain .socail-media li a span {
   color: var(--light-color);
   font-size: 16px;
   font-weight: 700;
 }
-.navbar .contain .nav-contain .socail-media li a:hover img, .navbar .contain .nav-contain .socail-media li a:hover span {
+.navbar .contain .socail-media li a:hover img, .navbar .contain .socail-media li a:hover span {
   animation: fadeInLeft 0.4s linear both;
 }
-.navbar .contain .nav-contain .socail-media li a:hover::after {
+.navbar .contain .socail-media li a:hover::after {
   height: 100%;
 }
 
@@ -1958,8 +1980,8 @@ footer .contain {
   text-align: center;
 }
 footer .contain .brand-name img {
-  width: 218px;
-  height: 90px;
+  width: 310px;
+  height: 200px;
   -o-object-fit: contain;
      object-fit: contain;
   background-color: var(--light-color);
@@ -2223,17 +2245,17 @@ footer .copyrights a span {
 }
 
 @media (max-width: 1999px) and (min-width: 1000px) {
-  .navbar .contain .nav-contain .navbar-nav li {
+  .navbar .contain .navbar-nav li {
     margin-inline-end: 15px;
   }
-  .navbar .contain .nav-contain .navbar-nav li a {
+  .navbar .contain .navbar-nav li a {
     font-size: 13px;
   }
-  .navbar .contain .nav-contain .socail-media li a {
+  .navbar .contain .socail-media li a {
     width: 40px;
     height: 40px;
   }
-  .navbar .contain .nav-contain .socail-media li a img {
+  .navbar .contain .socail-media li a img {
     width: 20px;
     height: 20px;
   }
@@ -2245,7 +2267,7 @@ footer .copyrights a span {
   .navbar.scrolled {
     padding: 10px 0px;
   }
-  .navbar.scrolled .nav-contain {
+  .navbar.scrolled .navbar-nav {
     top: 80px !important;
   }
   .navbar .hamburger {
@@ -2254,7 +2276,7 @@ footer .copyrights a span {
   .navbar .button-contain {
     display: none;
   }
-  .navbar .nav-contain {
+  .navbar .navbar-nav {
     width: 100% !important;
     height: 100vh;
     position: absolute;
@@ -2269,33 +2291,25 @@ footer .copyrights a span {
     align-content: flex-start !important;
     transition: all 0.3s linear;
   }
-  .navbar .nav-contain .navbar-nav {
-    width: 100%;
-    flex-direction: column !important;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    margin-bottom: 15px;
-  }
-  .navbar .nav-contain .navbar-nav li {
+  .navbar .navbar-nav li {
     width: 100%;
     margin: 0px !important;
     padding: 10px 0px;
     border-bottom: 1px solid rgba(17, 24, 68, 0.2);
   }
-  .navbar .nav-contain .navbar-nav li:last-child {
+  .navbar .navbar-nav li:last-child {
     border-bottom: 0px !important;
   }
-  .navbar .nav-contain .navbar-nav li a {
+  .navbar .navbar-nav li a {
     width: 100%;
   }
-  .navbar .nav-contain .navbar-nav li a::after, .navbar .nav-contain .navbar-nav li a::before {
+  .navbar .navbar-nav li a::after, .navbar .navbar-nav li a::before {
     display: none;
   }
-  .navbar .nav-contain .navbar-nav li a:hover {
+  .navbar .navbar-nav li a:hover {
     color: var(--primary-color);
   }
-  .navbar .nav-contain.active-nav {
+  .navbar .navbar-nav.active-nav {
     right: 0px;
   }
   .navbar .brand-name img {
@@ -2304,7 +2318,7 @@ footer .copyrights a span {
     -o-object-position: left !important;
        object-position: left !important;
   }
-  .navbar.scrolled .nav-contain {
+  .navbar.scrolled .navbar-nav {
     top: 94px;
   }
   .navbar.scrolled .contain {
@@ -2316,11 +2330,11 @@ footer .copyrights a span {
     height: 300px;
     margin: 0px auto;
   }
-  html[dir=rtl] .nav-contain {
+  html[dir=rtl] .navbar-nav {
     left: -100%;
     right: unset;
   }
-  html[dir=rtl] .nav-contain.active-nav {
+  html[dir=rtl] .navbar-nav.active-nav {
     left: 0px;
     right: unset;
   }
