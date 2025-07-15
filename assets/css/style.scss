@@ -1,51 +1,51 @@
-@import 'global';
-@import 'animations';
+@import "global";
+@import "animations";
 
 html[dir="rtl"] {
   @font-face {
     font-family: "montserrat";
-    src: url('../fonts/montserrat/Montserrat-Medium.woff2');
+    src: url("../fonts/montserrat/Montserrat-Medium.woff2");
     font-weight: 700;
   }
 
   @font-face {
     font-family: "montserrat";
-    src: url('../fonts/montserrat/Montserrat-Regular.woff2');
+    src: url("../fonts/montserrat/Montserrat-Regular.woff2");
     font-weight: 500;
   }
 
   @font-face {
     font-family: "montserrat";
-    src: url('../fonts/montserrat/Montserrat-Regular.woff2');
+    src: url("../fonts/montserrat/Montserrat-Regular.woff2");
     font-weight: 900;
   }
 
   * {
-    font-family: "montserrat" , sans-serif ;
+    font-family: "montserrat", sans-serif;
   }
 }
 
 html[dir="rtl"] {
   @font-face {
     font-family: "rb";
-    src: url('../fonts/rb/RB_REGULAR.woff2');
+    src: url("../fonts/rb/RB_REGULAR.woff2");
     font-weight: 700;
   }
 
   @font-face {
     font-family: "rb";
-    src: url('../fonts/rb/RB_REGULAR.woff2');
+    src: url("../fonts/rb/RB_REGULAR.woff2");
     font-weight: 500;
   }
 
   @font-face {
     font-family: "rb";
-    src: url('../fonts/rb/RB_Bold.woff2');
+    src: url("../fonts/rb/RB_Bold.woff2");
     font-weight: 900;
   }
 
   * {
-    font-family: "rb" , sans-serif ;
+    font-family: "rb", sans-serif;
   }
 
   .sub-header,
@@ -71,7 +71,7 @@ html[dir="rtl"] {
 
     &:hover {
       img {
-        animation: pulsecustRtl .3s linear both;
+        animation: pulsecustRtl 0.3s linear both;
       }
     }
   }
@@ -103,7 +103,7 @@ html[dir="rtl"] {
 
     &::before {
       left: 11%;
-      right: unset!important;
+      right: unset !important;
     }
   }
 
@@ -146,7 +146,8 @@ html[dir="rtl"] {
     right: 15px;
   }
 
-  .whatsapp-btn, .call-btn {
+  .whatsapp-btn,
+  .call-btn {
     right: unset;
     left: 20px;
   }
@@ -163,10 +164,12 @@ html[dir="rtl"] {
   --secondary-color: #921a1c;
   --dark-color: #000;
   --light-color: #fff;
-  --gray-color: #9B9B9B;
+  --gray-color: #9b9b9b;
 
-  --pimrary-filer: invert(6%) sepia(26%) saturate(7488%) hue-rotate(227deg) brightness(108%) contrast(97%);
-  --light-filter: invert(100%) sepia(6%) saturate(2%) hue-rotate(104deg) brightness(106%) contrast(100%);
+  --pimrary-filer: invert(6%) sepia(26%) saturate(7488%) hue-rotate(227deg)
+    brightness(108%) contrast(97%);
+  --light-filter: invert(100%) sepia(6%) saturate(2%) hue-rotate(104deg)
+    brightness(106%) contrast(100%);
 }
 
 .custom-btn {
@@ -195,12 +198,14 @@ html[dir="rtl"] {
   }
 
   &.primary-color {
-    &::after, &::before {
+    &::after,
+    &::before {
       width: 55%;
     }
 
     &:hover {
-      &::after, &::before {
+      &::after,
+      &::before {
         width: 0px;
       }
 
@@ -210,13 +215,14 @@ html[dir="rtl"] {
 
       img {
         filter: var(--pimrary-filer);
-        animation: tada .3s linear;
+        animation: tada 0.3s linear;
       }
     }
   }
 
   &.boder-color {
-    &::after, &::before {
+    &::after,
+    &::before {
       width: 0px;
     }
 
@@ -227,9 +233,10 @@ html[dir="rtl"] {
     span {
       color: var(--primary-color);
     }
-    
+
     &:hover {
-      &::after, &::before {
+      &::after,
+      &::before {
         width: 55%;
       }
 
@@ -238,20 +245,21 @@ html[dir="rtl"] {
       }
 
       img {
-        animation: tada .3s linear;
+        animation: tada 0.3s linear;
         filter: var(--light-filter);
       }
     }
   }
-  
+
   &.white-border {
     outline-color: var(--light-color) !important;
-    
-    &::after, &::before {
+
+    &::after,
+    &::before {
       width: 0px;
       background-color: var(--light-color) !important;
     }
-    
+
     img {
       filter: var(--light-filter);
     }
@@ -261,7 +269,8 @@ html[dir="rtl"] {
     }
 
     &:hover {
-      &::after, &::before {
+      &::after,
+      &::before {
         width: 55%;
       }
 
@@ -282,13 +291,14 @@ html[dir="rtl"] {
     text-transform: capitalize;
   }
 
-  &::after, &::before {
-    content: '';
+  &::after,
+  &::before {
+    content: "";
     position: absolute;
     height: 100%;
     top: 0;
     z-index: -1;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
     background-color: var(--primary-color);
   }
 
@@ -327,7 +337,13 @@ html[dir="rtl"] {
     font-size: 16px;
     font-weight: 500;
     margin: 0px;
+    width: 50%;
+    margin: 0px auto;
     text-transform: capitalize;
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
   }
 
   .see-more {
@@ -391,7 +407,7 @@ html[dir="rtl"] {
   padding: 10px 0px 10px;
   background-color: var(--light-color);
   z-index: 999;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 
   &.scrolled {
     box-shadow: 0px 0px 10px rgba($color: #111844, $alpha: 0.2);
@@ -404,40 +420,40 @@ html[dir="rtl"] {
     align-content: center;
     justify-content: space-between;
 
-    .hamburger{
+    .hamburger {
       display: none;
 
-      .line{
+      .line {
         width: 30px;
         height: 3px;
-        background: var(--secondary-color); 
+        background: var(--secondary-color);
         display: block;
         margin: 8px auto;
         transition: all 0.3s ease-in-out;
       }
 
-      &.active{
+      &.active {
         transition: all 0.3s ease-in-out;
         transition-delay: 0.6s;
         transform: rotate(45deg);
 
-        .line{
-          &:nth-child(2){
+        .line {
+          &:nth-child(2) {
             width: 0px;
           }
 
-          &:nth-child(1) ,
-          &:nth-child(3){
+          &:nth-child(1),
+          &:nth-child(3) {
             transition-delay: 0.3s;
           }
 
-          &:nth-child(1){
+          &:nth-child(1) {
             transform: translateY(6.5px);
           }
-          
-          &:nth-child(3){
+
+          &:nth-child(3) {
             transform: translateY(-15px) rotate(90deg);
-          }                             
+          }
         }
       }
     }
@@ -484,23 +500,24 @@ html[dir="rtl"] {
             }
           }
         }
-        
+
         a {
           position: relative;
           color: var(--dark-color);
           text-transform: capitalize;
           font-size: 16px;
           font-weight: 700;
-          
-          &::after, &::before {
-            content: '';
+
+          &::after,
+          &::before {
+            content: "";
             position: absolute;
             width: 0px;
             height: 3px;
             bottom: 0px;
             z-index: -1;
             background-color: var(--secondary-color);
-            transition: all .3s linear;
+            transition: all 0.3s linear;
           }
 
           &::after {
@@ -511,9 +528,11 @@ html[dir="rtl"] {
             right: 0;
           }
 
-          &:hover, &.active {
+          &:hover,
+          &.active {
             color: var(--secondary-color);
-            &::after, &::before {
+            &::after,
+            &::before {
               width: 55%;
             }
           }
@@ -544,14 +563,14 @@ html[dir="rtl"] {
           align-items: center;
           align-content: center;
           justify-content: center;
-          background-color: rgba($color: #921a1c, $alpha: 1.0);
+          background-color: rgba($color: #921a1c, $alpha: 1);
           border-radius: 6px;
           position: relative;
           overflow: hidden;
           z-index: 9;
 
           &::after {
-            content: '';
+            content: "";
             position: absolute;
             width: 100%;
             height: 0px;
@@ -559,7 +578,7 @@ html[dir="rtl"] {
             top: 0;
             left: 0;
             z-index: -1;
-            transition: all .3s linear;
+            transition: all 0.3s linear;
           }
 
           img {
@@ -575,8 +594,9 @@ html[dir="rtl"] {
           }
 
           &:hover {
-            img, span {
-              animation: fadeInLeft .4s linear both;
+            img,
+            span {
+              animation: fadeInLeft 0.4s linear both;
             }
 
             &::after {
@@ -602,23 +622,23 @@ header {
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     z-index: 0;
-    background: linear-gradient(90deg, #921a1c, #423D43);
-    opacity: .8;
+    background: linear-gradient(90deg, #921a1c, #423d43);
+    opacity: 0.8;
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background:  url('../images/intro/intro.jpg') top right / cover no-repeat;
+    background: url("../images/intro/intro.jpg") top right / cover no-repeat;
     top: 0;
     left: 0;
     z-index: -1;
@@ -626,7 +646,7 @@ header {
   }
 
   .swiper-slide {
-    padding: 0px 10px 179px; 
+    padding: 0px 10px 179px;
 
     .contain {
       width: 100%;
@@ -647,7 +667,7 @@ header {
       .sub-title {
         font-size: 20px;
         font-weight: 700;
-        color: rgba($color: #fff, $alpha: 0.70);
+        color: rgba($color: #fff, $alpha: 0.7);
         margin: 15px 0px 0px;
       }
 
@@ -678,7 +698,7 @@ header {
           margin-inline-start: 10px;
 
           &::after {
-            content: '';
+            content: "";
             position: absolute;
             width: 100%;
             height: 100%;
@@ -706,7 +726,7 @@ header {
             }
 
             img {
-              animation: fadeInUp .3s linear;
+              animation: fadeInUp 0.3s linear;
               filter: var(--light-filter);
             }
           }
@@ -719,7 +739,7 @@ header {
     justify-content: flex-start !important;
 
     .swiper-pagination-bullet {
-      background-color: rgba($color: #fff, $alpha: 0.10);
+      background-color: rgba($color: #fff, $alpha: 0.1);
 
       &.swiper-pagination-bullet-active {
         background-color: var(--light-color) !important;
@@ -741,12 +761,11 @@ header {
     align-items: center;
     align-content: center;
     justify-content: center;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
     scroll-behavior: smooth;
 
-
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 100%;
       height: 100%;
@@ -783,30 +802,30 @@ header {
 
 .sub-header {
   width: 100%;
-  padding: 200px 0px 68px;
-  background: linear-gradient(90deg, #921a1c, #423D43);
+  padding: 250px 0px 150px;
+  background: linear-gradient(90deg, #921a1c, #423d43);
   position: relative;
   z-index: 9;
   overflow: hidden;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     z-index: -1;
-    background: linear-gradient(90deg, #921a1c, #423D43);
-    opacity: .8;
+    background: linear-gradient(90deg, #921a1c, #423d43);
+    opacity: 0.8;
   }
 
-  &::after {
-    content: '';
+  .intro-img {
     position: absolute;
+    object-position: center;
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    background:  url('../images/intro/intro.jpg') top right / cover no-repeat;
     top: 0;
     left: 0;
     z-index: -2;
@@ -827,7 +846,7 @@ header {
     }
 
     p {
-      color: rgba($color: #fff, $alpha: 0.70);
+      color: rgba($color: #fff, $alpha: 0.7);
       font-size: 16px;
       font-weight: 500;
       margin: 0px;
@@ -845,11 +864,12 @@ header {
         z-index: 9;
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 24px;
           height: 24px;
-          background: url('../images/icons/list_arrow.svg') center / contain no-repeat;
+          background: url("../images/icons/list_arrow.svg") center / contain
+            no-repeat;
           top: calc(50% - 12px);
           left: 10px;
           z-index: -1;
@@ -871,14 +891,15 @@ header {
           }
         }
 
-        span, a {
+        span,
+        a {
           color: var(--light-color);
           font-size: 16px;
           font-weight: 500;
         }
 
         a {
-          opacity: .7;
+          opacity: 0.7;
 
           &:hover {
             opacity: 1;
@@ -945,13 +966,12 @@ header {
     align-content: center;
 
     .custom-btn:nth-child(1) {
-      margin-inline-end: 10px
+      margin-inline-end: 10px;
     }
   }
 }
 
 .signle-course {
-
   .image-content {
     width: 100%;
     height: 447px;
@@ -983,7 +1003,7 @@ header {
       margin-bottom: 30px;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 40px;
         height: 6px;
@@ -991,7 +1011,7 @@ header {
         bottom: 0;
         left: 0;
         border-radius: 5px;
-        transition: all .3s linear;
+        transition: all 0.3s linear;
       }
     }
 
@@ -1013,14 +1033,14 @@ header {
         align-items: center;
         align-content: center;
         justify-content: center;
-  
+
         img {
           width: 24px;
           height: 24px;
           object-fit: contain;
           margin-inline-end: 6px;
         }
-  
+
         span {
           color: var(--primary-color);
           font-size: 14px;
@@ -1054,7 +1074,7 @@ header {
     align-content: center;
 
     .custom-btn:nth-child(1) {
-      margin-inline-end: 10px
+      margin-inline-end: 10px;
     }
   }
 
@@ -1068,7 +1088,7 @@ header {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: all .3s linear;
+      transition: all 0.3s linear;
     }
 
     &:hover img {
@@ -1084,19 +1104,21 @@ header {
     margin-bottom: 65px !important;
   }
 
-  &::after, &::before {
-    content: '';
+  &::after,
+  &::before {
+    content: "";
     position: absolute;
     width: 92px;
     height: 75px;
-    background: url('../images/icons/dot_pattern.svg') center / contain no-repeat;
+    background: url("../images/icons/dot_pattern.svg") center / contain
+      no-repeat;
     z-index: -1;
     animation: pulsecustdots 5s linear infinite;
   }
 
   &::after {
     top: 33px;
-    left: 11%
+    left: 11%;
   }
 
   &::before {
@@ -1111,16 +1133,17 @@ header {
     z-index: 9;
     border-radius: 6px;
     overflow: hidden !important;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
 
-    &::after, &::before {
-      content: '';
+    &::after,
+    &::before {
+      content: "";
       position: absolute;
       width: 100%;
       top: 0;
       left: 0;
       z-index: -1;
-      transition: all .3s linear;
+      transition: all 0.3s linear;
     }
 
     &::after {
@@ -1142,7 +1165,7 @@ header {
       top: 0;
       left: 0;
       z-index: -2;
-      transition: all .3s linear;
+      transition: all 0.3s linear;
     }
 
     .date {
@@ -1189,7 +1212,7 @@ header {
 
       img {
         width: 24px !important;
-        height: 24px !important; 
+        height: 24px !important;
         object-fit: contain;
         margin-inline-end: 4px !important;
       }
@@ -1218,7 +1241,7 @@ header {
         padding-bottom: 15px;
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 40px;
           height: 6px;
@@ -1226,12 +1249,12 @@ header {
           bottom: 0;
           left: 0;
           border-radius: 5px;
-          transition: all .3s linear;
+          transition: all 0.3s linear;
         }
       }
 
       p {
-        color: rgba($color: #fff, $alpha: 0.70);
+        color: rgba($color: #fff, $alpha: 0.7);
         font-size: 16px;
         font-weight: 500;
         margin: 20px 0px;
@@ -1266,9 +1289,9 @@ header {
         }
 
         &:hover {
-         img {
-          animation: translateX 1s linear infinite !important;
-         }
+          img {
+            animation: translateX 1s linear infinite !important;
+          }
         }
       }
     }
@@ -1321,20 +1344,22 @@ header {
   }
 }
 
-.events, .blog {
+.events,
+.blog {
   padding-bottom: 45px !important;
 
   .heading {
     margin-bottom: 65px;
   }
 
-  .events-box, .blog-box {
+  .events-box,
+  .blog-box {
     width: 100%;
     position: relative;
-    border: 1px solid rgba($color: #4B4D4A, $alpha: 0.08);
+    border: 1px solid rgba($color: #4b4d4a, $alpha: 0.08);
     border-radius: 6px;
     overflow: hidden;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
 
     .image-content {
       width: 100%;
@@ -1383,14 +1408,14 @@ header {
           align-items: center;
           align-content: center;
           justify-content: center;
-    
+
           img {
             width: 24px;
             height: 24px;
             object-fit: contain;
             margin-inline-end: 6px;
           }
-    
+
           span {
             color: var(--primary-color);
             font-size: 14px;
@@ -1403,7 +1428,7 @@ header {
         width: 100%;
         padding-top: 20px;
         margin: 24px 0px;
-        border-top: 1px solid rgba($color: #4B4D4A, $alpha: 0.08);
+        border-top: 1px solid rgba($color: #4b4d4a, $alpha: 0.08);
         color: var(--dark-color);
         font-size: 16px;
         font-weight: 500;
@@ -1419,7 +1444,7 @@ header {
         z-index: 9;
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 100%;
           height: 3px;
@@ -1428,7 +1453,7 @@ header {
           left: 0;
           z-index: -1;
           transform: scaleX(0);
-          transition: all .3s linear;
+          transition: all 0.3s linear;
         }
 
         img {
@@ -1446,7 +1471,7 @@ header {
 
         &:hover {
           &::after {
-            transform: scale(1)
+            transform: scale(1);
           }
 
           span {
@@ -1460,7 +1485,7 @@ header {
       transform: translateY(-10px);
 
       .date img {
-        animation: tada .3s linear both;
+        animation: tada 0.3s linear both;
       }
 
       h2 {
@@ -1485,7 +1510,7 @@ header {
     z-index: 9;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 100%;
       height: 80%;
@@ -1531,12 +1556,12 @@ header {
           span {
             color: var(--light-color);
             font-size: 50px;
-            font-weight: 900
+            font-weight: 900;
           }
         }
 
         p {
-          color: rgba($color: #fff, $alpha: 0.70);
+          color: rgba($color: #fff, $alpha: 0.7);
           font-size: 16px;
           font-weight: 500;
           margin: 0px;
@@ -1556,10 +1581,10 @@ header {
         overflow: hidden;
         background-color: var(--light-color);
         z-index: 9;
-        transition: all .3s linear;
+        transition: all 0.3s linear;
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 100%;
           height: 100%;
@@ -1588,13 +1613,13 @@ header {
           transform: translateY(-10px);
 
           &::after {
-            animation: sideClip .5s linear;
+            animation: sideClip 0.5s linear;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           }
 
           img {
             filter: var(--pimrary-filer);
-            animation: tada .3s linear;
+            animation: tada 0.3s linear;
           }
 
           span {
@@ -1608,7 +1633,7 @@ header {
 
 .blog {
   padding-bottom: 90px !important;
-  
+
   .blog-box {
     display: flex;
     align-items: center;
@@ -1649,14 +1674,16 @@ header {
   .client-box {
     width: 100%;
     height: 80px;
-    transition: all .3s linear;
+    border: 1px solid rgba($color: #111844, $alpha: 0.06);
+    transition: all 0.3s linear;
+    padding: 5px;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       object-position: center;
-      opacity: .5;
+      opacity: 0.5;
     }
 
     &:hover {
@@ -1692,15 +1719,16 @@ header {
     flex-direction: column;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 100%;
       height: 100%;
       top: 0;
       left: 0;
       z-index: -1;
-      background: url('../images/contact_now/contact_us.webp') center / cover no-repeat;
-      opacity: .3;
+      background: url("../images/contact_now/contact_us.webp") center / cover
+        no-repeat;
+      opacity: 0.3;
       animation: pulsecust 20s linear infinite alternate;
     }
 
@@ -1711,10 +1739,10 @@ header {
       justify-content: center;
       align-content: center;
       align-items: center;
-      
+
       &:nth-child(1) {
         padding-bottom: 53px;
-        border-bottom: 1px solid rgba($color: #fff, $alpha: .150);
+        border-bottom: 1px solid rgba($color: #fff, $alpha: 0.15);
       }
 
       &:last-child {
@@ -1726,7 +1754,7 @@ header {
         height: 60px;
         object-fit: contain;
         margin-bottom: 20px;
-        transition: all .3s linear;
+        transition: all 0.3s linear;
         filter: var(--light-filter);
       }
 
@@ -1745,7 +1773,7 @@ header {
   .form-contain {
     width: 100%;
     padding: 50px 60px;
-    border: 1px solid rgba($color: #4B4D4A, $alpha: 0.08);
+    border: 1px solid rgba($color: #4b4d4a, $alpha: 0.08);
     border-radius: 6px;
   }
 }
@@ -1761,7 +1789,7 @@ header {
     margin-bottom: 50px;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 40px;
       height: 6px;
@@ -1769,7 +1797,7 @@ header {
       bottom: 0;
       left: 0;
       border-radius: 5px;
-      transition: all .3s linear;
+      transition: all 0.3s linear;
     }
   }
 
@@ -1811,7 +1839,7 @@ header {
       background-color: rgba($color: #111844, $alpha: 0.06);
       border-radius: 6px;
       padding-inline-start: 50px;
-      border: 1px solid rgba($color: #111844, $alpha: 0.0);
+      border: 1px solid rgba($color: #111844, $alpha: 0);
       color: var(--dark-color);
       font-size: 16px;
       font-weight: 500;
@@ -1819,13 +1847,13 @@ header {
       &::placeholder {
         color: var(--gray-color);
         font-size: 16px;
-        font-weight: 500
+        font-weight: 500;
       }
     }
 
     &:hover {
       img {
-        animation: tada .3s linear both;
+        animation: tada 0.3s linear both;
       }
 
       .from-control {
@@ -1866,7 +1894,7 @@ header {
         font-size: 50px;
         font-weight: 900;
         margin-bottom: 0px;
-        
+
         span {
           color: var(--primary-color);
           font-size: 50px;
@@ -1875,7 +1903,7 @@ header {
       }
 
       p {
-        color: rgba($color: #fff, $alpha: 0.70);
+        color: rgba($color: #fff, $alpha: 0.7);
         font-size: 16px;
         font-weight: 500;
         margin: 20px 0px 35px;
@@ -1961,7 +1989,7 @@ header {
   .contain {
     width: 100%;
     padding: 70px;
-    border: 1px solid rgba($color: #4B4D4A, $alpha: 0.08);
+    border: 1px solid rgba($color: #4b4d4a, $alpha: 0.08);
     border-radius: 6px;
     margin-bottom: 40px;
 
@@ -2008,7 +2036,7 @@ header {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: all .3s linear;
+      transition: all 0.3s linear;
     }
 
     &:hover img {
@@ -2055,22 +2083,22 @@ header {
           align-items: center;
           align-content: center;
           justify-content: center;
-          background-color: rgba($color: #fff, $alpha: 0.20);
+          background-color: rgba($color: #fff, $alpha: 0.2);
           border-radius: 6px;
           position: relative;
           overflow: hidden;
           z-index: 9;
 
           &::after {
-            content: '';
+            content: "";
             position: absolute;
             width: 100%;
             height: 0px;
-            background-color: #4B4D4A;
+            background-color: #4b4d4a;
             top: 0;
             left: 0;
             z-index: -1;
-            transition: all .3s linear;
+            transition: all 0.3s linear;
           }
 
           img {
@@ -2086,8 +2114,9 @@ header {
           }
 
           &:hover {
-            img, span {
-              animation: fadeInLeft .4s linear both;
+            img,
+            span {
+              animation: fadeInLeft 0.4s linear both;
             }
 
             &::after {
@@ -2103,12 +2132,12 @@ header {
 footer {
   width: 100%;
   padding: 70px 0px 20px;
-  background-color: #423D43;
+  background-color: #423d43;
   position: relative;
   z-index: 9;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
@@ -2116,15 +2145,15 @@ footer {
     left: 0;
     z-index: 0;
     background: linear-gradient(90deg, #921a1c, #111844);
-    opacity: .8;
+    opacity: 0.8;
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url('../images/intro/intro.jpg') top right / cover no-repeat;
+    background: url("../images/intro/intro.jpg") top right / cover no-repeat;
     top: 0;
     left: 0;
     z-index: -1;
@@ -2149,7 +2178,7 @@ footer {
     }
 
     p {
-      color: rgba($color: #FFFFFF, $alpha: 0.70);
+      color: rgba($color: #ffffff, $alpha: 0.7);
       font-size: 16px;
       font-weight: 500;
       margin: 40px 0px 30px;
@@ -2185,14 +2214,14 @@ footer {
           align-items: center;
           align-content: center;
           justify-content: center;
-          background-color: rgba($color: #fff, $alpha: 0.20);
+          background-color: rgba($color: #fff, $alpha: 0.2);
           border-radius: 6px;
           position: relative;
           overflow: hidden;
           z-index: 9;
 
           &::after {
-            content: '';
+            content: "";
             position: absolute;
             width: 100%;
             height: 0px;
@@ -2200,7 +2229,7 @@ footer {
             top: 0;
             left: 0;
             z-index: -1;
-            transition: all .3s linear;
+            transition: all 0.3s linear;
           }
 
           img {
@@ -2216,8 +2245,9 @@ footer {
           }
 
           &:hover {
-            img, span {
-              animation: fadeInLeft .4s linear both;
+            img,
+            span {
+              animation: fadeInLeft 0.4s linear both;
             }
 
             &::after {
@@ -2232,7 +2262,7 @@ footer {
   .copyrights {
     width: 100%;
     padding-top: 20px;
-    border-top: 1px solid rgba($color: #FFFFFF, $alpha: 0.10);
+    border-top: 1px solid rgba($color: #ffffff, $alpha: 0.1);
     display: flex;
     align-items: center;
     position: relative;
@@ -2275,7 +2305,7 @@ footer {
 
 .modal.fade {
   transform: translateY(20px);
-  transition: all .3s linear;
+  transition: all 0.3s linear;
   padding: 0px !important;
 
   &.show {
@@ -2291,17 +2321,17 @@ footer {
     box-shadow: 0px 0px 10px rgba($color: #111844, $alpha: 0.05);
     border-radius: 10px !important;
     z-index: 9;
-  
+
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 200px;
       height: 70px;
-      background: url('../images/logo/logo.png') center / contain no-repeat;
+      background: url("../images/logo/logo.png") center / contain no-repeat;
       top: 10px;
       left: 0;
       z-index: -1;
-      opacity: .3;
+      opacity: 0.3;
     }
   }
 
@@ -2340,7 +2370,7 @@ footer {
       margin: 0px;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 40px;
         height: 6px;
@@ -2348,12 +2378,12 @@ footer {
         bottom: 0;
         left: 0;
         border-radius: 5px;
-        transition: all .3s linear;
+        transition: all 0.3s linear;
       }
     }
 
     p {
-      color: rgba($color: #000, $alpha: 0.70);
+      color: rgba($color: #000, $alpha: 0.7);
       font-size: 16px;
       font-weight: 500;
       margin: 20px 0px 0px;
@@ -2365,16 +2395,16 @@ footer {
 
     h1 {
       width: fit-content;
-      margin: 0px auto 20px; 
+      margin: 0px auto 20px;
     }
   }
 }
 
-.call-btn ,
+.call-btn,
 .whatsapp-btn {
   width: 50px;
   height: 50px;
-  background-color: #25D366;
+  background-color: #25d366;
   border-radius: 6px;
   display: flex;
   align-content: center;
@@ -2393,14 +2423,14 @@ footer {
   }
 
   &:hover img {
-    animation: fadeInLeft .3s linear both;
+    animation: fadeInLeft 0.3s linear both;
   }
 }
 
 .call-btn {
   bottom: 80px;
   background-color: var(--primary-color);
-  
+
   img {
     filter: var(--light-filter);
   }
@@ -2431,4 +2461,4 @@ footer {
   }
 }
 
-@import 'media';
+@import "media";
