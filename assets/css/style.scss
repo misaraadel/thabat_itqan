@@ -417,6 +417,33 @@ html[dir="rtl"] {
     box-shadow: 0px 0px 10px rgba($color: #111844, $alpha: 0.2);
   }
 
+  .top-contain {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .phone-number {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+
+      span {
+        color: var(--primary-color);
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+  }
+
   .contain {
     width: 100%;
     display: flex;
@@ -464,7 +491,7 @@ html[dir="rtl"] {
 
     .brand-name img {
       width: 200px;
-      height: 100px;
+      height: 80px;
       object-fit: contain;
     }
 
@@ -621,20 +648,21 @@ header {
   z-index: 9;
   overflow: hidden;
 
-  .container {
-    position: relative;
+  @media (min-width: 992px) {
+    height: 100vh;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    background: linear-gradient(90deg, #921a1c, #423d43);
-    opacity: 0.8;
+  .container {
+    position: relative;
+
+    @media (min-width: 992px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &::after {
@@ -642,7 +670,7 @@ header {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url("../images/intro/intro.jpg") top right / cover no-repeat;
+    background: url("../images/intro/image.png") top right / cover no-repeat;
     top: 0;
     left: 0;
     z-index: -1;
@@ -654,6 +682,9 @@ header {
 
     .contain {
       width: 100%;
+      text-align: center;
+      background-color: rgba($color: #000000, $alpha: 0.40);
+      padding: 20px 15px;
 
       h1 {
         font-size: 50px;
@@ -679,13 +710,14 @@ header {
         color: var(--light-color);
         font-size: 16px;
         font-weight: 500;
-        margin: 40px 0px;
+        margin: 30px 0px 0px;
       }
 
       .button-contain {
         display: flex;
         align-items: center;
         align-content: center;
+        justify-content: center;
 
         .video-play {
           width: 47px;
@@ -936,6 +968,18 @@ header {
     }
   }
 
+  &.round-img {
+    .image-content {
+      border-radius: 0px;
+      width: 100%;
+      animation: none !important;
+    }
+  }
+
+  &.gray-bk {
+    background-color: #f7f7f7;
+  }
+
   .contain {
     width: 100%;
     height: 100%;
@@ -967,12 +1011,12 @@ header {
     width: 100%;
     height: 100%;
     padding: 40px 20px;
-    border: 1px solid rgba($color: #921a1c, $alpha: .5);
+    border: 1px solid rgba($color: #921a1c, $alpha: 0.5);
     border-radius: 10px;
     position: relative;
     background-color: var(--light-color);
     z-index: 9;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -981,7 +1025,7 @@ header {
     justify-content: flex-start;
 
     &.primary-color {
-      border: 1px solid rgba($color: #111844, $alpha: .5);
+      border: 1px solid rgba($color: #111844, $alpha: 0.5);
       padding: 20px 10px;
       justify-content: flex-start;
       align-content: flex-start;
@@ -1029,7 +1073,8 @@ header {
       width: 60px;
       height: 60px;
       object-fit: contain;
-      filter: invert(13%) sepia(40%) saturate(6989%) hue-rotate(347deg) brightness(85%) contrast(92%);
+      filter: invert(13%) sepia(40%) saturate(6989%) hue-rotate(347deg)
+        brightness(85%) contrast(92%);
     }
 
     .data {
@@ -1224,6 +1269,15 @@ header {
   &::before {
     bottom: 33px;
     right: 11%;
+  }
+
+  &.no-pattern {
+    .course-box {
+      &::after,
+      &::before {
+        display: none;
+      } 
+    }
   }
 
   .course-box {
@@ -1596,6 +1650,19 @@ header {
 
   .swiper-wrapper {
     padding: 10px 0px 50px;
+  }
+}
+
+.services {
+  .blog-box {
+    .contain {
+      padding: 20px 10px;
+
+      p {
+        margin: 12px 0px;
+        padding-top: 12px;
+      }
+    }
   }
 }
 
