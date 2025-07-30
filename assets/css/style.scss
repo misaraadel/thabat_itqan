@@ -647,22 +647,16 @@ header {
   position: relative;
   z-index: 9;
   overflow: hidden;
-
-  @media (min-width: 992px) {
-    height: 100vh;
-  }
+  height: 100vh;
 
   .container {
     position: relative;
+    width: 100%;
+    height: 100%;
+  }
 
-    @media (min-width: 992px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      align-content: center;
-      width: 100%;
-      height: 100%;
-    }
+  .row {
+    height: 100%;
   }
 
   &::after {
@@ -679,6 +673,11 @@ header {
 
   .swiper-slide {
     padding: 0px 10px 179px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 
     .contain {
       width: 100%;
@@ -1870,10 +1869,22 @@ header {
 .contact-us {
   padding-bottom: 70px;
 
+  .iframe-contain {
+    width: 100%;
+    height: 500px;
+    margin-top: 40px;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
   .contact-box {
     width: 100%;
     height: 100%;
-    padding: 60px 46px 60px !important;
+    padding: 40px 46px !important;
     position: relative;
     z-index: 9;
     border-radius: 6px;
@@ -1906,14 +1917,12 @@ header {
       justify-content: center;
       align-content: center;
       align-items: center;
-
-      &:nth-child(1) {
-        padding-bottom: 53px;
-        border-bottom: 1px solid rgba($color: #fff, $alpha: 0.15);
-      }
+      padding: 20px 0px;
+      border-bottom: 1px solid rgba($color: #fff, $alpha: 0.15);
 
       &:last-child {
-        padding-top: 53px;
+        padding-bottom: 0px;
+        border-bottom: 0px;
       }
 
       img {
@@ -2310,8 +2319,8 @@ footer {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 0;
-    background: linear-gradient(90deg, #921a1c, #111844);
+    z-index: -1;
+    background: rgba($color: #423d43, $alpha: 0.8);
     opacity: 0.8;
   }
 
@@ -2320,7 +2329,7 @@ footer {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url("../images/intro/intro.jpg") top right / cover no-repeat;
+    background: url("../images/intro/image.png") top right / cover no-repeat;
     top: 0;
     left: 0;
     z-index: -1;
@@ -2334,6 +2343,8 @@ footer {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    background-color: rgba($color: #423d43, $alpha: 0.3);
+    padding: 20px 15px;
 
     .brand-name img {
       width: 310px;

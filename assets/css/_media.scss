@@ -27,7 +27,7 @@
       padding: 10px 0px;
 
       .navbar-nav {
-        top: 80px !important;
+        top: 100px !important;
       }
     }
     .hamburger {
@@ -45,7 +45,7 @@
       padding: 20px 15px;
       background: #fff;
       z-index: 99;
-      top: 80px;
+      top: 100px;
       right: -100%;
       flex-direction: column !important;
       justify-content: flex-start !important;
@@ -89,7 +89,7 @@
 
     &.scrolled {
       .navbar-nav {
-        top: 94px;
+        top: 120px;
       }
 
       .contain {
