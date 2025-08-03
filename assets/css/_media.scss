@@ -66,10 +66,6 @@
         a {
           width: 100%;
 
-          &::after, &::before {
-            display: none;
-          }
-
           &:hover {
             color: var(--primary-color);
           }

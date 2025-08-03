@@ -573,6 +573,92 @@ html[dir=rtl] .call-btn {
     width: fit-content !important;
   }
 }
+.navbar .contain .navbar-nav li .dropdown-menu {
+  width: 255px;
+  padding: 32px 24px;
+  background-color: var(--light-color);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateY(20px);
+  border: 0px;
+  border-radius: 0px;
+  box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.05);
+  transition: all 0.3s linear;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+html[dir=ltr] .navbar .contain .navbar-nav li .dropdown-menu {
+  width: 330px;
+}
+.navbar .contain .navbar-nav li .dropdown-menu.show {
+  transform: translateY(0px);
+  opacity: 1;
+  visibility: visible;
+}
+.navbar .contain .navbar-nav li .dropdown-menu .dropdown-item {
+  width: 100%;
+  display: block;
+  padding-inline-start: 20px;
+  position: relative;
+  z-index: 9;
+  color: var(--dark-color);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: start;
+  text-transform: capitalize;
+}
+html[dir=ltr] .navbar .contain .navbar-nav li .dropdown-menu .dropdown-item {
+  font-size: 14px;
+}
+.navbar .contain .navbar-nav li .dropdown-menu .dropdown-item::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  top: calc(50% - 5px);
+  right: 0px;
+  z-index: -1;
+}
+html[dir=ltr] .navbar .contain .navbar-nav li .dropdown-menu .dropdown-item::after {
+  left: 0;
+  right: unset;
+}
+.navbar .contain .navbar-nav li .dropdown-menu .dropdown-item:hover {
+  background: transparent;
+  border: 0px;
+  color: var(--primary-color);
+}
+@media (max-width: 992px) {
+  .navbar .contain .navbar-nav li .dropdown-menu {
+    width: 100% !important;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: none;
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
+    padding: 15px 10px;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  .navbar .contain .navbar-nav li .dropdown-menu.show {
+    display: block;
+  }
+}
+.navbar .contain .navbar-nav li.show .nav-link.dropdown-toggle::before {
+  transform: rotate(180deg);
+}
 .navbar .contain .navbar-nav li a {
   position: relative;
   color: var(--dark-color);
@@ -580,27 +666,35 @@ html[dir=rtl] .call-btn {
   font-size: 16px;
   font-weight: 700;
 }
-.navbar .contain .navbar-nav li a::after, .navbar .contain .navbar-nav li a::before {
+.navbar .contain .navbar-nav li a.dropdown-toggle {
+  padding-inline-end: 30px !important;
+}
+@media (max-width: 1400px) and (min-width: 993px) {
+  .navbar .contain .navbar-nav li a.dropdown-toggle {
+    padding-inline-end: 24px !important;
+  }
+}
+.navbar .contain .navbar-nav li a.dropdown-toggle::after {
+  display: none;
+}
+.navbar .contain .navbar-nav li a.dropdown-toggle::before {
   content: "";
   position: absolute;
-  width: 0px;
-  height: 3px;
-  bottom: 0px;
+  width: 24px !important;
+  height: 24px !important;
+  background: url("../images/icons/down_arrow_2.svg") center/contain no-repeat;
+  top: calc(50% - 12px) !important;
+  left: 0px !important;
   z-index: -1;
-  background-color: var(--secondary-color);
+  filter: var(--primary-filter);
   transition: all 0.3s linear;
 }
-.navbar .contain .navbar-nav li a::after {
-  left: 0;
-}
-.navbar .contain .navbar-nav li a::before {
+html[dir=ltr] .navbar .contain .navbar-nav li a.dropdown-toggle::before {
   right: 0;
+  left: unset;
 }
 .navbar .contain .navbar-nav li a:hover, .navbar .contain .navbar-nav li a.active {
   color: var(--secondary-color);
-}
-.navbar .contain .navbar-nav li a:hover::after, .navbar .contain .navbar-nav li a:hover::before, .navbar .contain .navbar-nav li a.active::after, .navbar .contain .navbar-nav li a.active::before {
-  width: 55%;
 }
 .navbar .contain .socail-media {
   display: flex;
@@ -2533,9 +2627,6 @@ footer .copyrights a span {
   }
   .navbar .navbar-nav li a {
     width: 100%;
-  }
-  .navbar .navbar-nav li a::after, .navbar .navbar-nav li a::before {
-    display: none;
   }
   .navbar .navbar-nav li a:hover {
     color: var(--primary-color);
