@@ -1693,6 +1693,11 @@ header .scroll-arrow:hover img {
   margin: 12px 0px;
   padding-top: 12px;
 }
+.services .blog-box .contain .custom-btn {
+  height: 30px;
+  width: 95px;
+  margin-inline-start: auto;
+}
 
 .contact-now {
   width: 100%;
