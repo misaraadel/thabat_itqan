@@ -145,7 +145,7 @@ $(document).ready(function () {
         spaceBetween: 18,
       },
       1024: {
-        slidesPerView: 5,
+        slidesPerView: 9,
         spaceBetween: 18,
       },
     },
